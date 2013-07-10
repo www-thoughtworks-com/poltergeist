@@ -70,6 +70,7 @@ class Poltergeist.WebPage
     @_errors.push(message: message, stack: stackString)
 
   onResourceRequestedNative: (request) ->
+    console.log 'ZZZZZZ wow FORKED'
     @lastRequestId = request.id
 
     if request.url == @redirectURL
