@@ -1,6 +1,6 @@
 class Poltergeist.WebPage
   @CALLBACKS = ['onAlert', 'onConsoleMessage', 'onLoadFinished', 'onInitialized',
-                'onLoadStarted', 'onResourceRequested', 'onResourceReceived',
+                'onLoadStarted', 'onResourceRequested', 'onResourceReceived', 'onResourceError'
                 'onError', 'onNavigationRequested', 'onUrlChanged', 'onPageCreated']
 
   @DELEGATES = ['open', 'sendEvent', 'uploadFile', 'release', 'render']
@@ -69,8 +69,10 @@ class Poltergeist.WebPage
 
     @_errors.push(message: message, stack: stackString)
 
+  onResourceErrorNative: (resourceError) ->
+    console.log 'ERROR: PhantomJs returned error ' + resourceError.errorString + ' trying to open ' + resourceError.url
+
   onResourceRequestedNative: (request) ->
-    console.log 'ZZZZZZ wow FORKED'
     @lastRequestId = request.id
 
     if request.url == @redirectURL
