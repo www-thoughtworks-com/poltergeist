@@ -10,9 +10,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jon Leighton"]
   s.email       = ["j@jonathanleighton.com"]
-  s.homepage    = "http://github.com/jonleighton/poltergeist"
-  s.summary     = "PhantomJS driver for Capybara"
-  s.description = "PhantomJS driver for Capybara"
+  s.homepage    = "http://github.com/www-thoughtworks-com/poltergeist"
+  s.summary     = "PhantomJS driver for Capybara, forked for debugging in www-thoughtworks-com"
+  s.description = "PhantomJS driver for Capybara, forked for debugging in www-thoughtworks-com"
 
   s.required_ruby_version = ">= 1.9.2"
 
